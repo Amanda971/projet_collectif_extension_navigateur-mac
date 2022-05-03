@@ -1,0 +1,34 @@
+{
+    "manifest_version" : 3,
+    "name": "Testify",
+    "version": "1.0",
+
+    "description": "On teste la création d'extension sur Chrome",
+    
+    "content_scripts": [{
+      "css": ["test01.css"],
+      "js":["background.js"],
+      "matches": ["https://www.youtube.com/*"]
+    }],
+
+    
+    "permissions": ["storage","activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_index": "index.html",
+        "default_icon": {
+            "16": "/images/get_started16.png",
+            "32": "/images/get_started32.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+          }
+        
+      },
+
+      "icons": {
+        "16": "/images/get_started16.png",
+        "32": "/images/get_started32.png",
+        "48": "/images/get_started48.png",
+        "128": "/images/get_started128.png"
+      }
+}
