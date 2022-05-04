@@ -1,3 +1,9 @@
 let htmlpage = document.documentElement.innerText
-let count = htmlpage.split(' ').length
+console.log(htmlpage)
+let count = htmlpage.split(/(?:"\r\n"| )+/)
 console.log(count)
+
+
+wordsByMinute = 250
+readingSpeed = 
+pageReadingSpeed 
