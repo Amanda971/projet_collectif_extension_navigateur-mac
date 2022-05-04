@@ -1,0 +1,8 @@
+{
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "versionString",
+    
+    "description": "Extension de stockage et de (re)lecture de page web"
+    
+    }
