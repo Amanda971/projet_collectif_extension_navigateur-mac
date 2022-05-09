@@ -1,8 +1,18 @@
 {
     "manifest_version": 3,
     "name": "My Extension",
-    "version": "versionString",
+    "version": "1.0",
     
-    "description": "Extension de stockage et de (re)lecture de page web"
+    "description": "Extension de stockage et de (re)lecture de page web",
     
-    }
+    "permissions": ["storage", "tabs"],
+
+    "action": {
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [{
+        "js": ["wordcount.js"],
+        "matches": ["<all_urls>"]
+    }]
+}
