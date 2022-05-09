@@ -14,5 +14,9 @@
     "content_scripts": [{
         "js": ["wordcount.js"],
         "matches": ["<all_urls>"]
+    }],
+
+    "background": [{
+        "persistent": true
     }]
 }

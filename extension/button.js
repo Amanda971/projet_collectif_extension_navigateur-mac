@@ -1,11 +1,10 @@
 let button = document.getElementById("saveUrl")
 
-
-
-function storeURLS() {
+button.addEventListener('click', function() {
     console.log("coucou")
 
-    // for (i=0; )
+    let allURLS = []
+
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true, 'currentWindow': true}, function (tabs) {
         var url = tabs[0].url;
         console.log(url);
@@ -14,7 +13,11 @@ function storeURLS() {
 
     function setStorageKey(savedUrl) {
         chrome.storage.sync.set({"url": savedUrl}, function() {
-        console.log(`Mon url sauvegardé est `+ savedUrl)
+        while (allURLS.lenght >= 0) {
+            allURLS.push(savedUrl)
+            
+        }
+        console.log(allURLS)
         getStoredUrl()
      })
     
@@ -25,7 +28,6 @@ function storeURLS() {
             //items = [ { "yourBody": "myBody" } ]
          });
     }
- 
-}}
 
-button.addEventListener('click', storeURLS())
+}})
+
