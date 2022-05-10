@@ -11,20 +11,31 @@ button.addEventListener('click', function() {
         setStorageKey(url)
     });
 
-    function setStorageKey(savedUrl) {
-        chrome.storage.sync.set({"url": savedUrl}, function() {
-        allURLS.push(savedUrl)
-        console.log(allURLS)
-        getStoredUrl()
-     })
+    // function setStorageKey(savedUrl) {
+    //     chrome.storage.sync.set({"url": savedUrl}, function() {
+    //     allURLS.push(savedUrl)
+    //     console.log(allURLS)
+    //     getStoredUrl()
+    //  })
     
-    function getStoredUrl() {
-        chrome.storage.sync.get(["url"], function(items){
-        console.log('Value currently is ' + items.url)
-        document.getElementById("myUrl").innerHTML = items.url
-            //items = [ { "yourBody": "myBody" } ]
-         });
-    }
+    // function getStoredUrl() {
+    //     chrome.storage.sync.get(["url"], function(items){
+    //     console.log('Value currently is ' + items.url)
+    //     document.getElementById("myUrl").innerHTML = items.url
+    //         //items = [ { "yourBody": "myBody" } ]
+    //      });
+    //}
 
-}})
+
+
+    function setStorageKey(savedUrl){
+    chrome.storage.sync.get(["urlLists"], (obj) =>{
+        const currentLists = obj.urlLists ? obj.urlLists : [];
+        const mergedLists = [...currentLists,...[{urls : savedUrl}]];
+        console.log(mergedLists);
+        chrome.storage.sync.set({urlLists: mergedLists})
+
+    })
+    }
+})
 
