@@ -1,8 +1,22 @@
 {
-"manifest_version": 3,
-"name": "My Extension",
-"version": "versionString",
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "1.0",
+    
+    "description": "Extension de stockage et de (re)lecture de page web",
+    
+    "permissions": ["storage", "tabs"],
 
-"description": "Extension de stockage et de (re)lecture de page web"
+    "action": {
+        "default_popup": "popup.html"
+    },
 
+    "content_scripts": [{
+        "js": ["button.js"],
+        "matches": ["<all_urls>"]
+    }],
+
+    "background": [{
+        "persistent": true
+    }]
 }
