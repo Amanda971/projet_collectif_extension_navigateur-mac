@@ -1,19 +1,35 @@
+@font-face {
+    font-family: BreadleySans;
+    src: url(fonts/BreadleySans-Regular.ttf);
+}
+
 body {
-    background-color: pink;
+    background-color: rgb(230, 216, 181);
     height: 100px;
     width: 150px;
+    background: no-repeat url(image/back.png);
 }
 
 #saveUrl {
-    background-color: aquamarine;
+    
+  display: grid;
+  font-family: 'Lato';
+  color: #FEFEFE;
+  background: #613904;
+  border-radius: 30px;
+  border-color: antiquewhite;
+  cursor: pointer;
+  box-shadow: 0;
 }
 
 #saveUrl:hover {
-    background-color: bisque;
+    background-color: rgb(201, 121, 160);
 }
 
 h1 {
     font-size: 30px;
+    font-family: BreadleySans;
+    text-align: center;
 }
 
 .heading {
