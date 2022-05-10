@@ -27,9 +27,5 @@
     "content_scripts": [{
         "js": ["button.js"],
         "matches": ["<all_urls>"]
-    }],
-
-    "background": [{
-        "persistent": true
     }]
 }
