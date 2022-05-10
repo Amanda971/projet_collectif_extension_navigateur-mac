@@ -3,7 +3,7 @@ let button = document.getElementById("saveUrl")
 button.addEventListener('click', function() {
     console.log("coucou")
 
-    let allURLS = []
+    let allURLS = {}
 
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true, 'currentWindow': true}, function (tabs) {
         var url = tabs[0].url;
@@ -13,10 +13,7 @@ button.addEventListener('click', function() {
 
     function setStorageKey(savedUrl) {
         chrome.storage.sync.set({"url": savedUrl}, function() {
-        while (allURLS.lenght >= 0) {
-            allURLS.push(savedUrl)
-            
-        }
+        allURLS.push(savedUrl)
         console.log(allURLS)
         getStoredUrl()
      })
