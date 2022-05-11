@@ -36,15 +36,24 @@ button.addEventListener('click', function() {
     }
 })
 
-    chrome.storage.sync.get(["urlLists"], (obj) => {
-        console.log(obj.urlLists)
+chrome.storage.sync.get(["urlLists"], (obj) => {
+    console.log(obj.urlLists)
         if(obj.urlLists.length) {
             for (i=0; i <obj.urlLists.length; i++) {
+                let divLink = document.createElement("div")
+                divLink.className = "website"
                 let newLink = document.createElement("a")
                 newLink.setAttribute("href", obj.urlLists[i]["urls"])
                 newLink.setAttribute("target", "_blank")
                 newLink.innerHTML = obj.urlLists[i]["urls"] + "<br />"
-                document.getElementById("myUrl").appendChild(newLink)
+                document.getElementById("myUrl").appendChild(divLink)
+                divLink.append(newLink)
             }
         }
-    })
+})
+
+let deleteButton = document.getElementById("deleteUrl")
+
+deleteButton.addEventListener('click', function() {
+    chrome.storage.sync.clear()
+})

@@ -6,7 +6,7 @@
 body {
     background-color: rgb(230, 216, 181);
     height: 100px;
-    width: 150px;
+    width: 350px;
     background: no-repeat url(image/back.png);
 }
 
@@ -37,3 +37,24 @@ h1 {
     flex-direction: column;
     justify-content: center;
 }
+
+.website {
+    background-color: rgba(234, 231, 220, 0.7);
+    padding: 2px 2px 2px 2px;
+    margin: 5px 5px 5px 5px;
+}
+
+#deleteUrl {
+    display: grid;
+    font-family: 'Lato';
+    color: #FEFEFE;
+    background: #613904;
+    border-radius: 30px;
+    border-color: antiquewhite;
+    cursor: pointer;
+    box-shadow: 0;
+  }
+
+  #deleteUrl:hover {
+    background-color: rgb(111, 104, 208);
+}  
