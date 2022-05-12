@@ -5,7 +5,7 @@
     
     "description": "Extension de stockage et de (re)lecture de page web",
     
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
 
     "action": {
         "default_popup": "popup.html",

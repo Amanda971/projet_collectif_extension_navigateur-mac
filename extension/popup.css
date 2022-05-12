@@ -10,21 +10,21 @@ body {
     background: no-repeat url(image/back.png);
 }
 
-#saveUrl {
-    
-  display: grid;
-  font-family: 'Lato';
-  color: #FEFEFE;
-  background: #613904;
-  border-radius: 30px;
-  border-color: antiquewhite;
-  cursor: pointer;
-  box-shadow: 0;
-}
+#deleteUrl {
+    display: grid;
+    font-family: 'Lato';
+    color: #FEFEFE;
+    background: #f075dc;
+    border-radius: 30px;
+    border-color: antiquewhite;
+    cursor: pointer;
+    box-shadow: 0;
+    margin:0px 70px 0px 70px;
+  }
 
-#saveUrl:hover {
-    background-color: rgb(201, 121, 160);
-}
+  #deleteUrl:hover {
+    background-color: rgb(139, 132, 239);
+}  
 
 h1 {
     font-size: 30px;
@@ -44,17 +44,20 @@ h1 {
     margin: 5px 5px 5px 5px;
 }
 
-#deleteUrl {
+#saveUrl {
+    
     display: grid;
     font-family: 'Lato';
-    color: #FEFEFE;
-    background: #613904;
+    color: white;
+    background: #44987f;
     border-radius: 30px;
     border-color: antiquewhite;
     cursor: pointer;
     box-shadow: 0;
+    margin:0px 70px 0px 70px;
+    
   }
-
-  #deleteUrl:hover {
-    background-color: rgb(111, 104, 208);
-}  
+  
+  #saveUrl:hover {
+      background-color: rgb(228, 161, 17);
+  }

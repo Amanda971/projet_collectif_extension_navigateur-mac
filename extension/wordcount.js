@@ -3,7 +3,7 @@
 // let count = htmlpage.split(/"\r\n"| +/)
 // console.log(count)
 
-var wordsInPost = wordCount(document.querySelectorAll("p"))
+var wordsInPost = wordCount(document.querySelectorAll("div"))
 
 function wordCount(words) {
   var count = 0
@@ -15,6 +15,6 @@ function wordCount(words) {
 
 console.log(wordsInPost)
 
-averageWordsByMinute = 250
-pageReadingSpeed = 1 * wordsInPost / averageWordsByMinute
+averageWordsByMinute = 300
+pageReadingSpeed = Math.ceil(wordsInPost / averageWordsByMinute)
 console.log(`Vous pouvez lire cette page en ${pageReadingSpeed} minutes`)
